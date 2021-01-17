@@ -3,9 +3,9 @@ import {
   StyleSheet, Text, View,
 } from 'react-native';
 
-const Home = (): JSX.Element => (
+const SetAnimatedMatrix = (): JSX.Element => (
   <View style={styles.container}>
-    <Text style={styles.text}>Em desenvolvimento</Text>
+    <Text style={styles.text}>Matriz animada em desenvolvimento</Text>
   </View>
 );
 
@@ -20,5 +20,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
-
-export default Home;
+export default SetAnimatedMatrix;

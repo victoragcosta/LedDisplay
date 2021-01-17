@@ -3,9 +3,9 @@ import {
   StyleSheet, Text, View,
 } from 'react-native';
 
-const Home = (): JSX.Element => (
+const SetMatrix = (): JSX.Element => (
   <View style={styles.container}>
-    <Text style={styles.text}>Em desenvolvimento</Text>
+    <Text style={styles.text}>Matriz estática em desenvolvimento</Text>
   </View>
 );
 
@@ -20,5 +20,4 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
-
-export default Home;
+export default SetMatrix;
