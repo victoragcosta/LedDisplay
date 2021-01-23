@@ -4,6 +4,7 @@ const StyleConstants = {
   secondaryColor: '#000000',
   titleFontSize: 18,
   fontSize: 15,
-  containerMargin: 5,
+  containerMargin: 20,
+  cardsMargin: 5,
 };
 export default StyleConstants;

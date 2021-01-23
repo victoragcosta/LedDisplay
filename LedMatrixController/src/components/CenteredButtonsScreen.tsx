@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import StyleConstants from '../StyleConstants';
 
 interface Props {
   children: {
@@ -21,7 +22,6 @@ const CenteredButtonsScreen = ({ children }: Props): JSX.Element => (
   </SafeAreaView>
 );
 
-const fontSize = 20;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexGrow: 1,
-    padding: fontSize,
+    padding: StyleConstants.containerMargin,
   },
   wrapper: {
     flexDirection: 'row',

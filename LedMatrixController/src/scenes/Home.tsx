@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     width: 100,
     minHeight: 140,
     flexGrow: 1,
-    margin: StyleConstants.containerMargin,
+    margin: StyleConstants.cardsMargin,
     backgroundColor: StyleConstants.primaryColor,
   },
   cardText: {
