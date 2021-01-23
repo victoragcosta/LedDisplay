@@ -23,17 +23,16 @@ const Home = (): JSX.Element => {
   );
 };
 
-const fontSize = 20;
 const styles = StyleSheet.create({
   card: {
-    width: fontSize * 5,
-    minHeight: fontSize * 7,
+    width: 100,
+    minHeight: 140,
     flexGrow: 1,
-    margin: fontSize / 4,
+    margin: StyleConstants.containerMargin,
     backgroundColor: StyleConstants.primaryColor,
   },
   cardText: {
-    fontSize: fontSize * 0.9,
+    fontSize: StyleConstants.titleFontSize,
   },
 });
 
