@@ -20,8 +20,13 @@ An app that will be able to control an ESP32 controlled LED matrix that is conne
 ### Led Matrix Controller (React-Native)
 
 - [x] Cool name
+- [x] Basic Homepage
 - [ ] Set matrix
 - [ ] Matrix editor
+
+  - [x] Drawing matrix
+  - [ ] Color picker
+
 - [ ] Save matrix designs
 - [ ] Load matrix designs
 - [ ] Set sliding matrix
