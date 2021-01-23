@@ -32,7 +32,7 @@ const SetMatrix = (): JSX.Element => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.text}>Matriz estática em desenvolvimento</Text>
-      <ColorPicker style={{ margin: StyleConstants.containerMargin }} color={drawColor} />
+      <ColorPicker style={styles.colorPicker} color={drawColor} />
       <DrawableMatrix
         onDraw={(x, y) => onDraw(x, y, drawColor)}
         style={styles.matrix}
@@ -51,6 +51,10 @@ const styles = StyleSheet.create({
   },
   matrix: {
     aspectRatio: 1,
+  },
+  colorPicker: {
+    margin: StyleConstants.containerMargin,
+    flexDirection: 'row',
   },
   text: {
     fontSize: StyleConstants.titleFontSize,

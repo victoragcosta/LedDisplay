@@ -1,5 +1,8 @@
-import React from 'react';
-import { Text, View, ViewStyle } from 'react-native';
+import React, { useState } from 'react';
+import {
+  StyleSheet, Text, View, ViewStyle,
+} from 'react-native';
+import ColorWheel from './ColorWheel';
 
 interface Props {
   color: number[],
@@ -8,19 +11,40 @@ interface Props {
 
 const ColorPicker = ({ color, style }: Props): JSX.Element => (
   <View style={style}>
-    <Text style={{ textAlign: 'center' }}>Current Color</Text>
-    <View
-      style={{
-        height: 100,
-        width: 100,
-        backgroundColor: `rgb(${color[0]},${color[1]},${color[2]})`,
-      }}
-    />
+    <View style={styles.wrapper}>
+      <View style={styles.currentColorWrapper}>
+        <Text>Selected</Text>
+        <View
+          style={{
+            backgroundColor: `rgb(${color[0]},${color[1]},${color[2]})`,
+            ...styles.currentColor,
+          }}
+        />
+      </View>
+      <ColorWheel />
+    </View>
   </View>
 );
 
 ColorPicker.defaultProps = {
   style: undefined,
 };
+
+const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  currentColor: {
+    height: 50,
+    width: 50,
+  },
+  currentColorWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default ColorPicker;
