@@ -7,6 +7,7 @@ import Home from '../scenes/Home';
 import SetMatrix from '../scenes/SetMatrix';
 import SetSlidingMatrix from '../scenes/SetSlidingMatrix';
 import SetAnimatedMatrix from '../scenes/SetAnimatedMatrix';
+import StyleConstants from '../StyleConstants';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,7 +15,12 @@ interface IconFuncProps {focused:boolean, color: string; size: number}
 
 const RootNavigator = ():JSX.Element => (
   <NavigationContainer>
-    <Tab.Navigator initialRouteName="Home">
+    <Tab.Navigator
+      tabBarOptions={{
+        activeTintColor: StyleConstants.primaryColor,
+      }}
+      initialRouteName="Home"
+    >
       <Tab.Screen
         name="Home"
         component={Home}
@@ -41,7 +47,7 @@ const RootNavigator = ():JSX.Element => (
         options={{
           title: 'Set Animated Matrix',
           tabBarIcon: ({ focused, color, size }: IconFuncProps): React.ReactNode => (
-            <Icon name={`film${focused ? '' : '-outline'}`} size={size} color={color} />
+            <Icon name={`film${focused ? '-outline' : '-outline'}`} size={size} color={color} />
           ),
         }}
       />
@@ -51,7 +57,7 @@ const RootNavigator = ():JSX.Element => (
         options={{
           title: 'Set Sliding Matrix',
           tabBarIcon: ({ focused, color, size }: IconFuncProps): React.ReactNode => (
-            <Icon name={`text${focused ? '' : '-outline'}`} size={size} color={color} />
+            <Icon name={`text${focused ? '-outline' : '-outline'}`} size={size} color={color} />
           ),
         }}
       />
