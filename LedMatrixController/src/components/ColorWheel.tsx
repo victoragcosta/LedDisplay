@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  GestureResponderEvent, StyleSheet, View,
+  GestureResponderEvent, ImageBackground, StyleSheet, View,
 } from 'react-native';
 
 const ColorWheel = ():JSX.Element => {
@@ -56,13 +56,15 @@ const ColorWheel = ():JSX.Element => {
       nativeID="colorWheel"
       style={styles.colorWheel}
     >
-      <View
-        style={{
-          ...styles.colorWheelSelector,
-          left: selectorPos.x,
-          top: selectorPos.y,
-        }}
-      />
+      <ImageBackground style={styles.image} source={require("./colorwheel.png")}>
+        <View
+          style={{
+            ...styles.colorWheelSelector,
+            left: selectorPos.x,
+            top: selectorPos.y,
+          }}
+        />
+      </ImageBackground>
     </View>
 
   );
@@ -78,6 +80,12 @@ const styles = StyleSheet.create({
     width: 100,
     borderRadius: 99999,
     backgroundColor: 'red',
+    flexDirection: "column",
+    overflow: 'hidden'
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
   },
   colorWheelSelector: {
     borderRadius: 99999,
